@@ -1,0 +1,747 @@
+object Item3_form: TItem3_form
+  Left = 0
+  Top = 0
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = Single
+  Caption = 'Item 3: Superimposed Network'
+  ClientHeight = 561
+  ClientWidth = 488
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object Item3_panel: TPanel
+    Size.Width = 489.000000000000000000
+    Size.Height = 561.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object Item3: TLabel
+      AutoTranslate = False
+      StyledSettings = [Family]
+      Size.Width = 489.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 25.000000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.FontColor = claBurlywood
+      TextSettings.HorzAlign = Center
+      TextSettings.Trimming = None
+      Text = 'Item 3: Superimposed Network'
+      TabOrder = 14
+    end
+    object bracket1: TLabel
+      AutoTranslate = False
+      StyledSettings = [Family, Style, FontColor]
+      Position.X = -1.000000000000000000
+      Position.Y = 269.000000000000000000
+      Size.Width = 50.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 20.000000000000000000
+      TextSettings.HorzAlign = Center
+      TextSettings.Trimming = None
+      Text = '['
+      TabOrder = 28
+    end
+    object free: TLabel
+      AutoTranslate = False
+      StyledSettings = [Family, Style, FontColor]
+      Position.X = 71.000000000000000000
+      Position.Y = 277.000000000000000000
+      Size.Width = 42.000000000000000000
+      Size.Height = 41.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 15.000000000000000000
+      TextSettings.HorzAlign = Center
+      TextSettings.Trimming = None
+      Text = '.free,'
+      TabOrder = 24
+    end
+    object wait: TLabel
+      AutoTranslate = False
+      StyledSettings = [Family, Style, FontColor]
+      Position.X = 153.000000000000000000
+      Position.Y = 277.000000000000000000
+      Size.Width = 42.000000000000000000
+      Size.Height = 41.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 15.000000000000000000
+      TextSettings.HorzAlign = Center
+      TextSettings.Trimming = None
+      Text = '.wait,'
+      TabOrder = 18
+    end
+    object inside: TLabel
+      AutoTranslate = False
+      StyledSettings = [Family, Style, FontColor]
+      Position.X = 239.000000000000000000
+      Position.Y = 277.000000000000000000
+      Size.Width = 49.000000000000000000
+      Size.Height = 41.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 15.000000000000000000
+      TextSettings.HorzAlign = Center
+      TextSettings.Trimming = None
+      Text = '.inside,'
+      TabOrder = 17
+    end
+    object bracket2: TLabel
+      AutoTranslate = False
+      StyledSettings = [Family, Style, FontColor]
+      Position.X = 447.000000000000000000
+      Position.Y = 269.000000000000000000
+      Size.Width = 42.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 20.000000000000000000
+      TextSettings.HorzAlign = Center
+      TextSettings.Trimming = None
+      Text = ']'
+      TabOrder = 25
+    end
+    object Marking: TLabel
+      AutoTranslate = False
+      StyledSettings = []
+      Position.X = 24.000000000000000000
+      Position.Y = 240.000000000000000000
+      Size.Width = 81.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Family = 'Arial'
+      TextSettings.Font.Size = 18.000000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.FontColor = claCadetblue
+      TextSettings.HorzAlign = Center
+      TextSettings.Trimming = None
+      Text = 'Marking: '
+      TabOrder = 12
+    end
+    object freeTok: TNumberBox
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 46
+      Cursor = crIBeam
+      ReadOnly = True
+      Position.X = 31.000000000000000000
+      Position.Y = 285.000000000000000000
+      HorzIncrement = 0.000000000000000000
+      Size.Width = 41.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object waitTok: TNumberBox
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 44
+      Cursor = crIBeam
+      ReadOnly = True
+      Position.X = 113.000000000000000000
+      Position.Y = 285.000000000000000000
+      HorzIncrement = 0.000000000000000000
+      Size.Width = 41.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object insideTok: TNumberBox
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 47
+      Cursor = crIBeam
+      ReadOnly = True
+      Position.X = 199.000000000000000000
+      Position.Y = 285.000000000000000000
+      HorzIncrement = 0.000000000000000000
+      Size.Width = 41.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object Line01: TLine
+      LineType = Diagonal
+      Position.X = 96.000000000000000000
+      Position.Y = 184.000000000000000000
+      Size.Width = 41.000000000000000000
+      Size.Height = 1.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object Line02: TLine
+      LineType = Diagonal
+      Position.X = 128.000000000000000000
+      Position.Y = 176.000000000000000000
+      Size.Width = 9.000000000000000000
+      Size.Height = 8.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object Line03: TLine
+      LineType = Diagonal
+      Position.X = 128.000000000000000000
+      Position.Y = 184.000000000000000000
+      RotationAngle = 90.000000000000000000
+      Size.Width = 9.000000000000000000
+      Size.Height = 8.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object p2: TCircle
+      Position.X = 48.000000000000000000
+      Position.Y = 160.000000000000000000
+      Size.Width = 50.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      ParentShowHint = False
+      ShowHint = False
+    end
+    object P2_tag: TLabel
+      AutoTranslate = False
+      Position.X = 48.000000000000000000
+      Position.Y = 200.000000000000000000
+      Size.Width = 50.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.HorzAlign = Center
+      TextSettings.Trimming = None
+      Text = 'wait'
+      TabOrder = 36
+    end
+    object p3: TCircle
+      Position.X = 224.000000000000000000
+      Position.Y = 160.000000000000000000
+      Size.Width = 50.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object P3_tag: TLabel
+      AutoTranslate = False
+      Position.X = 224.000000000000000000
+      Position.Y = 200.000000000000000000
+      Size.Width = 50.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.HorzAlign = Center
+      TextSettings.Trimming = None
+      Text = 'inside'
+      TabOrder = 27
+    end
+    object p5: TCircle
+      Position.X = 400.000000000000000000
+      Position.Y = 160.000000000000000000
+      Size.Width = 50.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      ParentShowHint = False
+      ShowHint = False
+    end
+    object P5_tag: TLabel
+      AutoTranslate = False
+      Position.X = 400.000000000000000000
+      Position.Y = 200.000000000000000000
+      Size.Width = 50.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.HorzAlign = Center
+      TextSettings.Trimming = None
+      Text = 'done'
+      TabOrder = 22
+    end
+    object T1: TRectangle
+      Fill.Color = claAliceblue
+      Position.X = 136.000000000000000000
+      Position.Y = 160.000000000000000000
+      Size.Width = 50.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      OnClick = T1Click
+    end
+    object T1_tag: TLabel
+      AutoTranslate = False
+      Position.X = 136.000000000000000000
+      Position.Y = 200.000000000000000000
+      Size.Width = 49.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.HorzAlign = Center
+      TextSettings.Trimming = None
+      Text = 'start'
+      TabOrder = 26
+    end
+    object T2: TRectangle
+      Fill.Color = claAliceblue
+      Position.X = 312.000000000000000000
+      Position.Y = 160.000000000000000000
+      Size.Width = 50.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      OnClick = T2Click
+    end
+    object T2_tag: TLabel
+      AutoTranslate = False
+      Position.X = 312.000000000000000000
+      Position.Y = 200.000000000000000000
+      Size.Width = 49.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.HorzAlign = Center
+      TextSettings.Trimming = None
+      Text = 'change'
+      TabOrder = 23
+    end
+    object TP2: TLabel
+      AutoTranslate = False
+      Position.X = 48.000000000000000000
+      Position.Y = 160.000000000000000000
+      Size.Width = 50.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.HorzAlign = Center
+      TextSettings.Trimming = None
+      Text = '0'
+      TabOrder = 32
+    end
+    object TP3: TLabel
+      AutoTranslate = False
+      Position.X = 224.000000000000000000
+      Position.Y = 160.000000000000000000
+      Size.Width = 50.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.HorzAlign = Center
+      TextSettings.Trimming = None
+      Text = '0'
+      TabOrder = 13
+    end
+    object TP5: TLabel
+      AutoTranslate = False
+      Position.X = 400.000000000000000000
+      Position.Y = 160.000000000000000000
+      Size.Width = 50.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.HorzAlign = Center
+      TextSettings.Trimming = None
+      Text = '0'
+      TabOrder = 11
+    end
+    object Line11: TLine
+      LineType = Diagonal
+      Position.X = 184.000000000000000000
+      Position.Y = 184.000000000000000000
+      Size.Width = 41.000000000000000000
+      Size.Height = 1.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object Line12: TLine
+      LineType = Diagonal
+      Position.X = 216.000000000000000000
+      Position.Y = 176.000000000000000000
+      Size.Width = 9.000000000000000000
+      Size.Height = 8.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object Line13: TLine
+      LineType = Diagonal
+      Position.X = 216.000000000000000000
+      Position.Y = 184.000000000000000000
+      RotationAngle = 90.000000000000000000
+      Size.Width = 9.000000000000000000
+      Size.Height = 8.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object Line21: TLine
+      LineType = Diagonal
+      Position.X = 272.000000000000000000
+      Position.Y = 184.000000000000000000
+      Size.Width = 41.000000000000000000
+      Size.Height = 1.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object Line22: TLine
+      LineType = Diagonal
+      Position.X = 304.000000000000000000
+      Position.Y = 176.000000000000000000
+      Size.Width = 9.000000000000000000
+      Size.Height = 8.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object Line23: TLine
+      LineType = Diagonal
+      Position.X = 304.000000000000000000
+      Position.Y = 184.000000000000000000
+      RotationAngle = 90.000000000000000000
+      Size.Width = 9.000000000000000000
+      Size.Height = 8.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object Line31: TLine
+      LineType = Diagonal
+      Position.X = 360.000000000000000000
+      Position.Y = 184.000000000000000000
+      Size.Width = 41.000000000000000000
+      Size.Height = 1.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object Line32: TLine
+      LineType = Diagonal
+      Position.X = 392.000000000000000000
+      Position.Y = 176.000000000000000000
+      Size.Width = 9.000000000000000000
+      Size.Height = 8.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object Line33: TLine
+      LineType = Diagonal
+      Position.X = 392.000000000000000000
+      Position.Y = 184.000000000000000000
+      RotationAngle = 90.000000000000000000
+      Size.Width = 9.000000000000000000
+      Size.Height = 8.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object Rectangle1: TRectangle
+      Fill.Color = claAliceblue
+      Position.X = 224.000000000000000000
+      Position.Y = 64.000000000000000000
+      Size.Width = 50.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      OnClick = T3Click
+    end
+    object p4: TCircle
+      Position.X = 312.000000000000000000
+      Position.Y = 64.000000000000000000
+      Size.Width = 50.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      ParentShowHint = False
+      ShowHint = False
+    end
+    object TP4: TLabel
+      AutoTranslate = False
+      Position.X = 312.000000000000000000
+      Position.Y = 64.000000000000000000
+      Size.Width = 50.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.HorzAlign = Center
+      TextSettings.Trimming = None
+      Text = '0'
+      TabOrder = 10
+    end
+    object p1: TCircle
+      Position.X = 136.000000000000000000
+      Position.Y = 64.000000000000000000
+      Size.Width = 50.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      ParentShowHint = False
+      ShowHint = False
+    end
+    object TP1: TLabel
+      AutoTranslate = False
+      Position.X = 136.000000000000000000
+      Position.Y = 64.000000000000000000
+      Size.Width = 50.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.HorzAlign = Center
+      TextSettings.Trimming = None
+      Text = '0'
+      TabOrder = 9
+    end
+    object P4_tag: TLabel
+      AutoTranslate = False
+      Position.X = 312.000000000000000000
+      Position.Y = 24.000000000000000000
+      Size.Width = 50.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.HorzAlign = Center
+      TextSettings.Trimming = None
+      Text = 'docu'
+      TabOrder = 21
+    end
+    object P1_tag: TLabel
+      AutoTranslate = False
+      Position.X = 136.000000000000000000
+      Position.Y = 24.000000000000000000
+      Size.Width = 50.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.HorzAlign = Center
+      TextSettings.Trimming = None
+      Text = 'free'
+      TabOrder = 19
+    end
+    object T3_tag: TLabel
+      AutoTranslate = False
+      Position.X = 224.000000000000000000
+      Position.Y = 24.000000000000000000
+      Size.Width = 50.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.HorzAlign = Center
+      TextSettings.Trimming = None
+      Text = 'end'
+      TabOrder = 20
+    end
+    object Line41: TLine
+      LineType = Diagonal
+      Position.X = 336.000000000000000000
+      Position.Y = 112.000000000000000000
+      Size.Width = 1.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object Line43: TLine
+      LineType = Diagonal
+      Position.X = 336.000000000000000000
+      Position.Y = 112.000000000000000000
+      Size.Width = 9.000000000000000000
+      Size.Height = 8.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object Line42: TLine
+      LineType = Diagonal
+      Position.X = 328.000000000000000000
+      Position.Y = 112.000000000000000000
+      RotationAngle = 90.000000000000000000
+      Size.Width = 9.000000000000000000
+      Size.Height = 8.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object Line51: TLine
+      LineType = Diagonal
+      Position.X = 272.000000000000000000
+      Position.Y = 88.000000000000000000
+      Size.Width = 41.000000000000000000
+      Size.Height = 1.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object Line52: TLine
+      LineType = Diagonal
+      Position.X = 272.000000000000000000
+      Position.Y = 88.000000000000000000
+      Size.Width = 9.000000000000000000
+      Size.Height = 8.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object Line53: TLine
+      LineType = Diagonal
+      Position.X = 272.000000000000000000
+      Position.Y = 80.000000000000000000
+      RotationAngle = 90.000000000000000000
+      Size.Width = 9.000000000000000000
+      Size.Height = 8.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object Line61: TLine
+      LineType = Diagonal
+      Position.X = 184.000000000000000000
+      Position.Y = 88.000000000000000000
+      Size.Width = 41.000000000000000000
+      Size.Height = 1.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object Line62: TLine
+      LineType = Diagonal
+      Position.X = 184.000000000000000000
+      Position.Y = 88.000000000000000000
+      Size.Width = 9.000000000000000000
+      Size.Height = 8.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object Line63: TLine
+      LineType = Diagonal
+      Position.X = 184.000000000000000000
+      Position.Y = 80.000000000000000000
+      RotationAngle = 90.000000000000000000
+      Size.Width = 9.000000000000000000
+      Size.Height = 8.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object Line71: TLine
+      LineType = Diagonal
+      Position.X = 160.000000000000000000
+      Position.Y = 112.000000000000000000
+      Size.Width = 1.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object Line72: TLine
+      LineType = Diagonal
+      Position.X = 160.000000000000000000
+      Position.Y = 152.000000000000000000
+      RotationAngle = 90.000000000000000000
+      Size.Width = 9.000000000000000000
+      Size.Height = 8.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object Line73: TLine
+      LineType = Diagonal
+      Position.X = 152.000000000000000000
+      Position.Y = 152.000000000000000000
+      Size.Width = 9.000000000000000000
+      Size.Height = 8.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object docu: TLabel
+      AutoTranslate = False
+      StyledSettings = [Family, Style, FontColor]
+      Position.X = 335.000000000000000000
+      Position.Y = 277.000000000000000000
+      Size.Width = 42.000000000000000000
+      Size.Height = 41.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 15.000000000000000000
+      TextSettings.HorzAlign = Center
+      TextSettings.Trimming = None
+      Text = '.docu,'
+      TabOrder = 16
+    end
+    object docuTok: TNumberBox
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 45
+      Cursor = crIBeam
+      ReadOnly = True
+      Position.X = 295.000000000000000000
+      Position.Y = 285.000000000000000000
+      HorzIncrement = 0.000000000000000000
+      Size.Width = 41.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object done: TLabel
+      AutoTranslate = False
+      StyledSettings = [Family, Style, FontColor]
+      Position.X = 423.000000000000000000
+      Position.Y = 277.000000000000000000
+      Size.Width = 42.000000000000000000
+      Size.Height = 41.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 15.000000000000000000
+      TextSettings.HorzAlign = Center
+      TextSettings.Trimming = None
+      Text = '.done'
+      TabOrder = 15
+    end
+    object doneTok: TNumberBox
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 43
+      Cursor = crIBeam
+      ReadOnly = True
+      Position.X = 383.000000000000000000
+      Position.Y = 285.000000000000000000
+      HorzIncrement = 0.000000000000000000
+      Size.Width = 41.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object Set: TButton
+      Position.X = 320.000000000000000000
+      Position.Y = 337.000000000000000000
+      Size.Width = 81.000000000000000000
+      Size.Height = 70.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 60
+      Text = 'Set'
+      OnClick = SetClick
+    end
+    object Label1: TLabel
+      StyledSettings = [Family, Style, FontColor]
+      Position.X = 80.000000000000000000
+      Position.Y = 361.000000000000000000
+      TextSettings.Font.Size = 13.000000000000000000
+      Text = 'Patients in wait: '
+      TabOrder = 57
+    end
+    object Label2: TLabel
+      StyledSettings = [Family, Style, FontColor]
+      Position.X = 80.000000000000000000
+      Position.Y = 385.000000000000000000
+      TextSettings.Font.Size = 13.000000000000000000
+      Text = 'Patients in done: '
+      TabOrder = 56
+    end
+    object PaDone: TNumberBox
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 61
+      Cursor = crIBeam
+      Position.X = 191.000000000000000000
+      Position.Y = 386.000000000000000000
+      HorzIncrement = 0.000000000000000000
+      Size.Width = 121.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object PaWait: TNumberBox
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 62
+      Cursor = crIBeam
+      Max = 10.000000000000000000
+      Position.X = 191.000000000000000000
+      Position.Y = 362.000000000000000000
+      HorzIncrement = 0.000000000000000000
+      Size.Width = 121.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object SpecBox: TComboBox
+      Items.Strings = (
+        'free'
+        'inside (treating)'
+        'docu')
+      Position.X = 191.000000000000000000
+      Position.Y = 337.000000000000000000
+      Size.Width = 121.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 59
+    end
+    object SpecState: TLabel
+      StyledSettings = [Family, Style, FontColor]
+      Position.X = 80.000000000000000000
+      Position.Y = 337.000000000000000000
+      TextSettings.Font.Size = 13.000000000000000000
+      Text = 'Specialist'#39's status: '
+      TabOrder = 58
+    end
+    object GroupBox1: TGroupBox
+      StyledSettings = [Family, Size, Other]
+      Position.X = 24.000000000000000000
+      Position.Y = 416.000000000000000000
+      Size.Width = 441.000000000000000000
+      Size.Height = 121.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Note'
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.FontColor = claTomato
+      TabOrder = 42
+      object Label3: TLabel
+        Position.X = 16.000000000000000000
+        Position.Y = 24.000000000000000000
+        Size.Width = 361.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        Text = 
+          '- This grand petri net is built for one specialist to treat pati' +
+          'ents.'
+        TabOrder = 40
+      end
+      object Label4: TLabel
+        Position.X = 16.000000000000000000
+        Position.Y = 40.000000000000000000
+        Size.Width = 417.000000000000000000
+        Size.Height = 49.000000000000000000
+        Size.PlatformDefault = False
+        Text = 
+          '- Choose specialist'#39's status, number of patients in state wait (' +
+          '<10 patients) and number of patients in state done, then click S' +
+          'et button to apply information to the net.'
+        TabOrder = 39
+      end
+      object Label5: TLabel
+        Position.X = 16.000000000000000000
+        Position.Y = 88.000000000000000000
+        Size.Width = 233.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        Text = '- Click any transition to fire.'
+        TabOrder = 38
+      end
+    end
+  end
+end

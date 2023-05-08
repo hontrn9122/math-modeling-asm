@@ -1,0 +1,94 @@
+//
+//###############################################################
+//#                              _`		      					#
+//#                          _ooOoo_							#
+//#                         o8888888o							#
+//#                         88" . "88							#
+//#                         (| -_- |)							#
+//#                         O\  =  /O							#
+//#                      ____/`---'\____		         		#
+//#                    .'  \\|     |//  `.						#
+//#                   /  \\|||  :  |||//  \						#
+//#                  /  _||||| -:- |||||_  \					#
+//#                  |   | \\\  -  /'| |   |					#
+//#                  | \_|  `\`---'//  |_/ |					#
+//#                  \  .-\__ `-. -'__/-.  /					#
+//#                ___`. .'  /--.--\  `. .'___					#
+//#             ."" '<  `.___\_<|>_/___.' _> \"".				#
+//#            | | :  `- \`. ;`. _/; .'/ /  .' ; |				#
+//#            \  \ `-.   \_\_`. _.'_/_/  -' _.' /				#
+//#=============`-.`___`-.__\ \___  /__.-'_.'_.-'===============#
+//                           `=--=-'
+//---------------------------------------------------------------
+
+#include <fmx.h>
+#pragma hdrstop
+
+#include "UI.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.fmx"
+#pragma resource ("*.Surface.fmx", _PLAT_MSWINDOWS)
+#pragma resource ("*.Windows.fmx", _PLAT_MSWINDOWS)
+
+TForm1 *Form1;
+Pnet item1(3,3);
+Pnet item2(3,2);
+Pnet item3(5,3);
+//---------------------------------------------------------------------------
+__fastcall TForm1::TForm1(TComponent* Owner)
+	: TForm(Owner)
+{
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm1::T1Click(TObject *Sender)
+{
+	if (TP1->Text.ToInt()>0){
+		TP1->Text =  IntToStr(TP1->Text.ToInt() - 1);
+		TP2->Text =  IntToStr(TP2->Text.ToInt() + 1);
+	}
+	Synced();
+	item1.fire(0);
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm1::T2Click(TObject *Sender)
+{
+	if (TP2->Text.ToInt()>0){
+		TP2->Text =  IntToStr(TP2->Text.ToInt() - 1);
+		TP3->Text =  IntToStr(TP3->Text.ToInt() + 1);
+	}
+	Synced();
+	item1.fire(1);
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm1::T3Click(TObject *Sender)
+{
+	if (TP3->Text.ToInt()>0){
+		TP3->Text =  IntToStr(TP3->Text.ToInt() - 1);
+		TP1->Text =  IntToStr(TP1->Text.ToInt() + 1);
+	}
+	Synced();
+	SyncedData();
+	item1.fire(2);
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm1::SetClick(TObject *Sender)
+{
+	TP1->Text = freeTok->Text;
+	TP2->Text = busyTok->Text;
+	TP3->Text = docuTok->Text;
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm1::Synced()
+{
+	freeTok->Text = TP1->Text;
+	busyTok->Text = TP2->Text;
+	docuTok->Text = TP3->Text;
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm1::SyncedData()
+{
+	item1.setTok(TP1->Text.ToInt(), 0);
+	item1.setTok(TP2->Text.ToInt(), 1);
+	item1.setTok(TP3->Text.ToInt(), 2);
+}

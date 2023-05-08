@@ -1,0 +1,210 @@
+object Item4_form: TItem4_form
+  Left = 0
+  Top = 0
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = Single
+  Caption = 'Form1'
+  ClientHeight = 480
+  ClientWidth = 1053
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object Item4_panel: TPanel
+    Size.Width = 1057.000000000000000000
+    Size.Height = 481.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object Item4: TLabel
+      AutoTranslate = False
+      StyledSettings = [Family]
+      Position.X = 32.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 345.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 25.000000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.FontColor = claBurlywood
+      TextSettings.HorzAlign = Center
+      TextSettings.Trimming = None
+      Text = 'Item 4: Reachable marking '
+      TabOrder = 16
+    end
+    object Bracket1_4: TLabel
+      AutoTranslate = False
+      StyledSettings = [Family, Style, FontColor]
+      Position.X = 24.000000000000000000
+      Position.Y = 48.000000000000000000
+      Size.Width = 50.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 20.000000000000000000
+      TextSettings.HorzAlign = Center
+      TextSettings.Trimming = None
+      Text = '['
+      TabOrder = 23
+    end
+    object Bracket2_4: TLabel
+      AutoTranslate = False
+      StyledSettings = [Family, Style, FontColor]
+      Position.X = 480.000000000000000000
+      Position.Y = 48.000000000000000000
+      Size.Width = 42.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 20.000000000000000000
+      TextSettings.HorzAlign = Center
+      TextSettings.Trimming = None
+      Text = ']'
+      TabOrder = 22
+    end
+    object docu_4: TLabel
+      AutoTranslate = False
+      StyledSettings = [Family, Style, FontColor]
+      Position.X = 368.000000000000000000
+      Position.Y = 56.000000000000000000
+      Size.Width = 42.000000000000000000
+      Size.Height = 41.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 15.000000000000000000
+      TextSettings.HorzAlign = Center
+      TextSettings.Trimming = None
+      Text = '.docu,'
+      TabOrder = 18
+    end
+    object docuTok_4: TNumberBox
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 41
+      Cursor = crIBeam
+      Position.X = 328.000000000000000000
+      Position.Y = 64.000000000000000000
+      Size.Width = 41.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object done_4: TLabel
+      AutoTranslate = False
+      StyledSettings = [Family, Style, FontColor]
+      Position.X = 456.000000000000000000
+      Position.Y = 56.000000000000000000
+      Size.Width = 42.000000000000000000
+      Size.Height = 41.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 15.000000000000000000
+      TextSettings.HorzAlign = Center
+      TextSettings.Trimming = None
+      Text = '.done'
+      TabOrder = 17
+    end
+    object doneTok_4: TNumberBox
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 42
+      Cursor = crIBeam
+      Position.X = 416.000000000000000000
+      Position.Y = 64.000000000000000000
+      Size.Width = 41.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object inside_4: TLabel
+      AutoTranslate = False
+      StyledSettings = [Family, Style, FontColor]
+      Position.X = 272.000000000000000000
+      Position.Y = 56.000000000000000000
+      Size.Width = 50.000000000000000000
+      Size.Height = 41.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 15.000000000000000000
+      TextSettings.HorzAlign = Center
+      TextSettings.Trimming = None
+      Text = '.inside,'
+      TabOrder = 19
+    end
+    object insideTok_4: TNumberBox
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 45
+      Cursor = crIBeam
+      Position.X = 232.000000000000000000
+      Position.Y = 64.000000000000000000
+      Size.Width = 41.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object free_4: TLabel
+      AutoTranslate = False
+      StyledSettings = [Family, Style, FontColor]
+      Position.X = 184.000000000000000000
+      Position.Y = 56.000000000000000000
+      Size.Width = 42.000000000000000000
+      Size.Height = 41.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 15.000000000000000000
+      TextSettings.HorzAlign = Center
+      TextSettings.Trimming = None
+      Text = '.free,'
+      TabOrder = 21
+    end
+    object freeTok_4: TNumberBox
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 44
+      Cursor = crIBeam
+      Position.X = 144.000000000000000000
+      Position.Y = 64.000000000000000000
+      Size.Width = 41.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object wait_4: TLabel
+      AutoTranslate = False
+      StyledSettings = [Family, Style, FontColor]
+      Position.X = 96.000000000000000000
+      Position.Y = 56.000000000000000000
+      Size.Width = 42.000000000000000000
+      Size.Height = 41.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 15.000000000000000000
+      TextSettings.HorzAlign = Center
+      TextSettings.Trimming = None
+      Text = '.wait,'
+      TabOrder = 20
+    end
+    object waitTok_4: TNumberBox
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 43
+      Cursor = crIBeam
+      Position.X = 56.000000000000000000
+      Position.Y = 64.000000000000000000
+      Size.Width = 41.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object Find_4: TButton
+      Position.X = 528.000000000000000000
+      Position.Y = 64.000000000000000000
+      TabOrder = 46
+      Text = 'Find'
+      OnClick = Find_4Click
+    end
+    object ScrollBox1: TScrollBox
+      Position.X = 48.000000000000000000
+      Position.Y = 104.000000000000000000
+      Size.Width = 953.000000000000000000
+      Size.Height = 353.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 47
+      Viewport.Width = 953.000000000000000000
+      Viewport.Height = 353.000000000000000000
+      object Memo1: TMemo
+        Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+        DataDetectorTypes = []
+        Size.Width = 953.000000000000000000
+        Size.Height = 353.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Viewport.Width = 953.000000000000000000
+        Viewport.Height = 353.000000000000000000
+      end
+    end
+  end
+end

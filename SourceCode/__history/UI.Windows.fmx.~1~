@@ -1,0 +1,15 @@
+inherited Form1_Windows: TForm1_Windows
+  Caption = 'PetriNet'
+  DesignerMasterStyle = 0
+  inherited Panel1: TPanel
+    inherited T1: TRectangle
+      OnClick = T1Click
+    end
+    inherited Item1: TLabel
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+    end
+    inherited Marking: TLabel
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+    end
+  end
+end

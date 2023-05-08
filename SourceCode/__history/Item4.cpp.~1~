@@ -1,0 +1,63 @@
+//---------------------------------------------------------------------------
+
+#include <fmx.h>
+#pragma hdrstop
+
+#include "Item4.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.fmx"
+TItem4_form *Item4_form;
+Pnet item4(5,3);
+//---------------------------------------------------------------------------
+__fastcall TItem4_form::TItem4_form(TComponent* Owner)
+	: TForm(Owner)
+{
+}
+//---------------------------------------------------------------------------
+
+
+void __fastcall TItem4_form::Find_4Click(TObject *Sender)
+{
+	int** matrix = new int* [5];
+	for (int i = 0; i < 5; i++) {
+		matrix[i] = new int[3];
+	}
+	matrix[0][0] = -1;
+	matrix[0][1] = 0;
+	matrix[0][2] = 1;
+	matrix[1][0] = -1;
+	matrix[1][1] = 0;
+	matrix[1][2] = 0;
+	matrix[2][0] = 1;
+	matrix[2][1] = -1;
+	matrix[2][2] = 0;
+	matrix[3][0] = 0;
+	matrix[3][1] = 1;
+	matrix[3][2] = -1;
+	matrix[4][0] = 0;
+	matrix[4][1] = 1;
+	matrix[4][2] = 0;
+	item4.setAdMatrix(matrix);
+	int marking[5];
+	marking[0] = freeTok_4->Text.ToInt();
+	marking[1] = waitTok_4->Text.ToInt();
+	marking[2] = insideTok_4->Text.ToInt();
+	marking[3] = docuTok_4->Text.ToInt();
+	marking[4] = doneTok_4->Text.ToInt();
+	item4.setIM(marking);
+	string Ptag[] = { "free", "wait", "inside", "docu", "done" };
+	string Ttag[] = { "start", "change", "end" };
+	item4.setPtag(Ptag);
+	item4.setTtag(Ttag);
+	String output = item4.printRM().c_str();
+	while(output.Length()>0){
+		int newline = output.Pos(L"\n");
+		String print = output.SubString(0, newline-1);
+		output = output.SubString(newline+1, output.Length()-1);
+		Memo1->Lines->Add(print);
+	}
+
+
+}
+//---------------------------------------------------------------------------

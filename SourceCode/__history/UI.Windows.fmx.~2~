@@ -1,0 +1,21 @@
+inherited Form1_Windows: TForm1_Windows
+  Caption = 'PetriNet'
+  DesignerMasterStyle = 0
+  inherited Item1_panel: TPanel
+    Position.X = -8.000000000000000000
+    inherited Item1: TLabel
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+    end
+    inherited Marking: TLabel
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+    end
+  end
+  inherited Item2_panel: TPanel
+    inherited Label10: TLabel
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+    end
+    inherited Label16: TLabel
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+    end
+  end
+end

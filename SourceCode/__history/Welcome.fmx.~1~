@@ -1,0 +1,109 @@
+object Welcome_form: TWelcome_form
+  Left = 0
+  Top = 0
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = Single
+  Caption = 'Mathematical Modeling Assignment'
+  ClientHeight = 330
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  FullScreen = True
+  DesignerMasterStyle = 0
+  object Panel1: TPanel
+    Size.Width = 641.000000000000000000
+    Size.Height = 337.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object Label1: TLabel
+      StyledSettings = []
+      Position.X = -8.000000000000000000
+      Position.Y = 96.000000000000000000
+      Size.Width = 641.000000000000000000
+      Size.Height = 89.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Family = '#9Slide03 Maven Pro'
+      TextSettings.Font.Size = 25.000000000000000000
+      TextSettings.Font.StyleExt = {00050000000000000004000000}
+      TextSettings.FontColor = claTeal
+      TextSettings.HorzAlign = Center
+      Text = 'Welcome to our team'#39's application'
+      TabOrder = 1
+    end
+    object Label2: TLabel
+      StyledSettings = []
+      Position.Y = 8.000000000000000000
+      Size.Width = 641.000000000000000000
+      Size.Height = 137.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Family = '#9Slide03 Nokia'
+      TextSettings.Font.Size = 25.000000000000000000
+      TextSettings.FontColor = claSandybrown
+      TextSettings.HorzAlign = Center
+      Text = 'MATHEMATICAL MODELING ASIGNMENT'
+      TabOrder = 0
+    end
+    object Item2: TButton
+      StyledSettings = [Family, Size, Style]
+      Position.X = 112.000000000000000000
+      Position.Y = 248.000000000000000000
+      Size.Width = 193.000000000000000000
+      Size.Height = 33.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 5
+      Text = 'Item 2: Patient Network'
+      TextSettings.FontColor = claDarkslategray
+      OnClick = Item2Click
+    end
+    object Item3: TButton
+      StyledSettings = [Family, Size, Style]
+      Position.X = 336.000000000000000000
+      Position.Y = 192.000000000000000000
+      Size.Width = 193.000000000000000000
+      Size.Height = 33.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 4
+      Text = 'Item 3: Superimposed Network'
+      TextSettings.FontColor = claDarkslategray
+      OnClick = Item3Click
+    end
+    object Item1: TButton
+      StyledSettings = [Family, Size, Style]
+      Position.X = 112.000000000000000000
+      Position.Y = 192.000000000000000000
+      Size.Width = 193.000000000000000000
+      Size.Height = 33.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 3
+      Text = 'Item 1: Specialist Network'
+      TextSettings.FontColor = claDarkslategray
+      OnClick = Item1Click
+    end
+    object Item4: TButton
+      StyledSettings = [Family, Size, Style]
+      Position.X = 336.000000000000000000
+      Position.Y = 248.000000000000000000
+      Size.Width = 193.000000000000000000
+      Size.Height = 33.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      Text = 'Item 4: Reachable Marking'
+      TextSettings.FontColor = claDarkslategray
+      OnClick = Item4Click
+    end
+    object Label3: TLabel
+      StyledSettings = [Family, Size]
+      Position.X = 560.000000000000000000
+      Position.Y = 304.000000000000000000
+      Size.Width = 65.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.StyleExt = {04040000000000000004000000}
+      TextSettings.FontColor = claCornflowerblue
+      TextSettings.HorzAlign = Center
+      Text = 'About us'
+      TabOrder = 6
+    end
+  end
+end

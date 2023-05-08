@@ -1,0 +1,29 @@
+inherited AboutUs_form_Windows: TAboutUs_form_Windows
+  DesignerMasterStyle = 0
+  inherited AboutUs_panel: TPanel
+    inherited DLT10: TLabel
+      Position.X = -13.000000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+    end
+    inherited GroupBox1: TGroupBox
+      inherited Member1: TEdit
+        TabOrder = 41
+      end
+      inherited Member2: TEdit
+        TabOrder = 40
+      end
+      inherited Member3: TEdit
+        TabOrder = 39
+      end
+      inherited Member4: TEdit
+        TabOrder = 38
+      end
+      inherited Member5: TEdit
+        TabOrder = 37
+      end
+    end
+    inherited AboutUs: TLabel
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+    end
+  end
+end

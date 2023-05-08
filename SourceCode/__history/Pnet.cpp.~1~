@@ -1,0 +1,50 @@
+//---------------------------------------------------------------------------
+
+#pragma hdrstop
+
+#include "Pnet.h"
+//---------------------------------------------------------------------------
+Pnet::Pnet(int _P, int _T) {
+	P = _P;
+	T = _T;
+	adMatrix = new int* [P];
+	for (int i = 0; i < P; i++) {
+		adMatrix[i] = new int[T];
+		for (int j = 0; j < T; j++) {
+			adMatrix[i][j] = 0;
+		}
+	}
+	marking = new int[P];
+	for (int i = 0; i < P; i++) {
+		marking[i] = 0;
+	}
+}
+//---------------------------------------------------------------------------
+void Pnet::setFR(int** _adMatrix) {
+	adMatrix = _adMatrix;
+}
+//---------------------------------------------------------------------------
+void Pnet::setTok(int tokNum, int _P) {
+	marking[_P] = tokNum;
+}
+//---------------------------------------------------------------------------
+void Pnet::fire(int _T) {
+	bool enable = true;
+	for (int i = 0; i < P; i++) {
+		if (adMatrix[i][_T] == -1 && marking[i] == 0) {
+			enable = false;
+		}
+	}
+	if (enable) {
+		for (int i = 0; i < P; i++) {
+			if (adMatrix[i][_T] == -1) {
+				marking[i]--;
+			}
+			else if (adMatrix[i][_T] == 1) {
+				marking[i]++;
+			}
+		}
+	}
+}
+//---------------------------------------------------------------------------
+#pragma package(smart_init)

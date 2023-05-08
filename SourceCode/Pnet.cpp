@@ -1,0 +1,273 @@
+//---------------------------------------------------------------------------
+
+#pragma hdrstop
+
+#include "Pnet.h"
+//---------------------------------------------------------------------------
+bool ArrEqual(int* a, int* b, int n) {
+	for (int i = 0; i < n; i++) {
+		if (a[i] != b[i]) return false;
+	}
+	return true;
+}
+//---------------------------------------------------------------------------
+MarkingList::Node::Node(int* _marking, int P) {
+	marking = new int[P];
+	for (int i = 0; i < P; i++) {
+		marking[i] = _marking[i];
+	}
+	next = nullptr;
+}
+//---------------------------------------------------------------------------
+MarkingList::~MarkingList() {
+	Node* tmp = head;
+	while (head != nullptr) {
+		head = head->next;
+		delete tmp;
+		tmp = head;
+	}
+	tail = nullptr;
+}
+//---------------------------------------------------------------------------
+void MarkingList::push(int* _marking, int P) {
+	if (head == nullptr) {
+		head = new Node(_marking, P);
+		tail = head;
+	}
+	else {
+		tail->next = new Node(_marking, P);
+		tail = tail->next;
+	}
+}
+//---------------------------------------------------------------------------
+bool MarkingList::found(int* _marking, int P) {
+	if (head == nullptr) return false;
+	Node* tmp = head;
+	while (tmp != nullptr && ArrEqual(tmp->marking, _marking, P) == false) {
+		tmp = tmp->next;
+	}
+	if (tmp == nullptr) return false;
+	return true;
+}
+//---------------------------------------------------------------------------
+string vecToString(vector<string> a) {
+	string print = "(";
+	int size = a.size();
+	for (int i = 0; i < size; i++) {
+		print += a[i] + ", ";
+	}
+	if (print.size() > 1) {
+		print.pop_back();
+		print.pop_back();
+	}
+	print += ")";
+	return print;
+}
+//---------------------------------------------------------------------------
+Pnet::Pnet(int _P, int _T) {
+	P = _P;
+	T = _T;
+	adMatrix = new int*[P];
+	for (int i = 0; i < P; i++) {
+		adMatrix[i] = new int[T];
+		for (int j = 0; j < T; j++) {
+			adMatrix[i][j] = 0;
+		}
+	}
+	marking = new int[P];
+	for (int i = 0; i < P; i++) {
+		marking[i] = 0;
+	}
+	enableT = new bool[T];
+	for (int i = 0; i < T; i++) {
+		enableT[i] = false;
+	}
+	Ptag = new string[P];
+	for (int i = 0; i < P; i++) {
+		Ptag[i] = i;
+	}
+	Ttag = new string[T];
+	for (int i = 0; i < T; i++) {
+		Ttag[i] = i;
+	}
+}
+//---------------------------------------------------------------------------
+Pnet::~Pnet() {
+	if (adMatrix != nullptr) {
+		for (int i = 0; i < P; i++)
+			delete[] adMatrix[i];
+		delete[] adMatrix;
+	}
+	if (marking != nullptr) delete[] marking;
+	if (Ptag != nullptr) delete[] Ptag;
+	if (Ttag != nullptr) delete[] Ttag;
+	if (enableT != nullptr) delete[] enableT;
+}
+//---------------------------------------------------------------------------
+void Pnet::setAdMatrix(int** _adMatrix) {
+	for (int i = 0; i < P; i++) {
+		for (int j = 0; j < T; j++) {
+			adMatrix[i][j] = _adMatrix[i][j];
+		}
+	}
+}
+//---------------------------------------------------------------------------
+void Pnet::setIM(int* IM) {
+	for (int i = 0; i < P; i++) {
+		marking[i] = IM[i];
+	}
+	updateEnable();
+}
+//---------------------------------------------------------------------------
+void Pnet::setPtag(string* tag) {
+	for (int i = 0; i < P; i++) {
+		Ptag[i] = tag[i];
+	}
+}
+//---------------------------------------------------------------------------
+void Pnet::setTtag(string* tag) {
+	for (int i = 0; i < T; i++) {
+		Ttag[i] = tag[i];
+	}
+}
+//---------------------------------------------------------------------------
+void Pnet::fire(int _T) {
+	bool enable = true;
+	for (int i = 0; i < P; i++) {
+		if (adMatrix[i][_T] == -1 && marking[i] < 1) {
+			enable = false;
+		}
+	}
+	if (enable) {
+		for (int i = 0; i < P; i++) {
+			if (adMatrix[i][_T] == -1) {
+				marking[i]--;
+			}
+			else if (adMatrix[i][_T] == 1) {
+				marking[i]++;
+			}
+		}
+	}
+	updateEnable();
+}
+//---------------------------------------------------------------------------
+void Pnet::updateEnable() {
+	for (int j = 0; j < T; j++) {
+		bool isEnabled = true;
+		for (int i = 0; i < P; i++) {
+			if (adMatrix[i][j] == -1 && marking[i] < 1) {
+				isEnabled = false;
+			}
+		}
+		enableT[j] = isEnabled;
+	}
+}
+//---------------------------------------------------------------------------
+bool Pnet::checkdeadlock() {
+	for (int i = 0; i < T; i++) {
+		if (enableT[i]) return false;
+	}
+	return true;
+}
+//---------------------------------------------------------------------------
+string Pnet::markingToString() {
+	string print = "[";
+	for (int i = 0; i < P; i++) {
+		print += to_string(marking[i]) + "." + Ptag[i] + ", ";
+	}
+	if (print.size() > 1) {
+		print.pop_back();
+		print.pop_back();
+	}
+	print += "]";
+	return print;
+}
+//---------------------------------------------------------------------------
+string Pnet::printRM() {
+	string output = "";
+	MarkingList* a = new MarkingList;
+	vector<string> firingseq;
+	int count = 0;
+	printRMhelper(a, firingseq, count, output);
+	output += "\nTotal: " + to_string(count);
+	if (count > 1) output += " reachable markings\n";
+	else output += " reachable marking\n";
+	return output;
+}
+//---------------------------------------------------------------------------
+void Pnet::printRMhelper(MarkingList* a, vector<string> firingseq, int& count, string& output) {
+	//check if current marking has been printed
+	if (a->found(marking, P) == false) { //if not, print the current marking and mark it as printed
+		count++;
+		a->push(marking, P);
+		output += "\nMarking: " + markingToString() + " can be reached via the path: " + vecToString(firingseq) + "\n";
+	}
+	else return; //if yes, return
+
+	if (checkdeadlock()) return; //if no transition enable, return
+
+	//find all reachable marking by DFS approach
+
+	for (int i = 0; i < T; i++) {	//start from first transition to last transition
+		//Backup current marking_______________________________________________________
+		int* MBackup1 = new int[P];
+		for (int j = 0; j < P; j++) {
+			MBackup1[j] = marking[j];
+		}
+		//_____________________________________________________________________________
+
+		//Backup current firing sequence_______________________________________________
+		vector<string> seqBackup1;
+		int seqsize = firingseq.size();
+		for (int j = 0; j < seqsize; j++) {
+			seqBackup1.push_back(firingseq[j]);
+		}
+		//_____________________________________________________________________________
+
+		while (enableT[i] == true) {			//check if current transition is enable
+			fire(i);							//if yes, fire this transition
+			firingseq.push_back(Ttag[i]);		//add this transition to firing sequence
+
+			//Backup curent firing sequence and current marking________________________
+			vector<string> seqBackup2;
+			int seqsize = firingseq.size();
+			for (int j = 0; j < seqsize; j++) {
+				seqBackup2.push_back(firingseq[j]);
+			}
+			int* MBackup2 = new int[P];
+			for (int j = 0; j < P; j++) {
+				MBackup2[j] = marking[j];
+			}
+			//__________________________________________________________________________
+
+			printRMhelper(a, firingseq, count, output);		//call this function recursively
+
+			//Restore firing sequence and marking_______________________________________
+			firingseq.clear();
+			for (int j = 0; j < seqsize; j++) {
+				firingseq.push_back(seqBackup2[j]);
+			}
+			for (int j = 0; j < P; j++) {
+				marking[j] = MBackup2[j];
+			}
+			delete[] MBackup2;
+			updateEnable();
+			//__________________________________________________________________________
+
+		}
+
+		//Restore firing sequence and marking___________________________________________
+		firingseq.clear();
+		for (int j = 0; j < seqsize; j++) {
+			firingseq.push_back(seqBackup1[j]);
+		}
+		for (int j = 0; j < P; j++) {
+			marking[j] = MBackup1[j];
+		}
+		delete[] MBackup1;
+		updateEnable();
+		//_______________________________________________________________________________
+	}
+}
+//---------------------------------------------------------------------------
+#pragma package(smart_init)

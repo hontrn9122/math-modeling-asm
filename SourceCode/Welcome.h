@@ -1,0 +1,38 @@
+//---------------------------------------------------------------------------
+
+#ifndef WelcomeH
+#define WelcomeH
+//---------------------------------------------------------------------------
+#include <System.Classes.hpp>
+#include <FMX.Controls.hpp>
+#include <FMX.Forms.hpp>
+#include <FMX.Controls.Presentation.hpp>
+#include <FMX.StdCtrls.hpp>
+#include <FMX.Types.hpp>
+#include <FMX.Objects.hpp>
+//---------------------------------------------------------------------------
+class TWelcome_form : public TForm
+{
+__published:	// IDE-managed Components
+	TPanel *Panel1;
+	TLabel *Label1;
+	TLabel *Label2;
+	TButton *Item2;
+	TButton *Item3;
+	TButton *Item1;
+	TButton *Item4;
+	TText *Text1;
+	void __fastcall Item1Click(TObject *Sender);
+	void __fastcall Item2Click(TObject *Sender);
+	void __fastcall Item3Click(TObject *Sender);
+	void __fastcall Item4Click(TObject *Sender);
+	void __fastcall Label3Click(TObject *Sender);
+	void __fastcall Text1Click(TObject *Sender);
+private:	// User declarations
+public:		// User declarations
+	__fastcall TWelcome_form(TComponent* Owner);
+};
+//---------------------------------------------------------------------------
+extern PACKAGE TWelcome_form *Welcome_form;
+//---------------------------------------------------------------------------
+#endif

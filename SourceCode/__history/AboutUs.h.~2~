@@ -1,0 +1,33 @@
+//---------------------------------------------------------------------------
+
+#ifndef AboutUsH
+#define AboutUsH
+//---------------------------------------------------------------------------
+#include <System.Classes.hpp>
+#include <FMX.Controls.hpp>
+#include <FMX.Forms.hpp>
+#include <FMX.Controls.Presentation.hpp>
+#include <FMX.StdCtrls.hpp>
+#include <FMX.Types.hpp>
+#include <FMX.Edit.hpp>
+//---------------------------------------------------------------------------
+class TAboutUs_form : public TForm
+{
+__published:	// IDE-managed Components
+	TPanel *AboutUs_panel;
+	TLabel *AboutUs;
+	TLabel *DLT10;
+	TGroupBox *GroupBox1;
+	TEdit *Member1;
+	TEdit *Member2;
+	TEdit *Member3;
+	TEdit *Member4;
+	TEdit *Member5;
+private:	// User declarations
+public:		// User declarations
+	__fastcall TAboutUs_form(TComponent* Owner);
+};
+//---------------------------------------------------------------------------
+extern PACKAGE TAboutUs_form *AboutUs_form;
+//---------------------------------------------------------------------------
+#endif

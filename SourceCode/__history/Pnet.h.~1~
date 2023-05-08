@@ -1,0 +1,23 @@
+//---------------------------------------------------------------------------
+
+#ifndef PnetH
+#define PnetH
+//---------------------------------------------------------------------------
+#include<iostream>
+#include<string>
+//---------------------------------------------------------------------------
+class Pnet {
+private:
+	int P, T;
+	int** adMatrix;
+	int* marking;
+public:
+	Pnet(int _P, int _T);
+	~Pnet(){}
+	void setFR(int** _adMatrix);
+	void setTok(int tokNum, int _P);
+	void fire(int _T);
+};
+
+//---------------------------------------------------------------------------
+#endif

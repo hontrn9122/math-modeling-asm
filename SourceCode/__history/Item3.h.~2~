@@ -1,0 +1,100 @@
+//---------------------------------------------------------------------------
+
+#ifndef Item3H
+#define Item3H
+//---------------------------------------------------------------------------
+#include <System.Classes.hpp>
+#include <FMX.Controls.hpp>
+#include <FMX.Forms.hpp>
+#include <FMX.Controls.Presentation.hpp>
+#include <FMX.Edit.hpp>
+#include <FMX.EditBox.hpp>
+#include <FMX.NumberBox.hpp>
+#include <FMX.Objects.hpp>
+#include <FMX.StdCtrls.hpp>
+#include <FMX.Types.hpp>
+#include <FMX.ListBox.hpp>
+//---------------------------------------------------------------------------
+class TItem3_form : public TForm
+{
+__published:	// IDE-managed Components
+	TLabel *Item3;
+	TLabel *bracket1;
+	TLabel *free;
+	TLabel *wait;
+	TLabel *inside;
+	TLabel *bracket2;
+	TLabel *Marking;
+	TNumberBox *freeTok;
+	TNumberBox *waitTok;
+	TNumberBox *insideTok;
+	TLine *Line01;
+	TLine *Line02;
+	TLine *Line03;
+	TCircle *p2;
+	TLabel *P2_tag;
+	TCircle *p3;
+	TLabel *P3_tag;
+	TCircle *p5;
+	TLabel *P5_tag;
+	TRectangle *T1;
+	TLabel *T1_tag;
+	TRectangle *T2;
+	TLabel *T2_tag;
+	TLabel *TP2;
+	TLabel *TP3;
+	TLabel *TP5;
+	TLine *Line11;
+	TLine *Line12;
+	TLine *Line13;
+	TLine *Line21;
+	TLine *Line22;
+	TLine *Line23;
+	TLine *Line31;
+	TLine *Line32;
+	TLine *Line33;
+	TRectangle *Rectangle1;
+	TCircle *p4;
+	TLabel *TP4;
+	TCircle *p1;
+	TLabel *TP1;
+	TLabel *P4_tag;
+	TLabel *P1_tag;
+	TPanel *Item3_panel;
+	TLabel *T3_tag;
+	TLine *Line41;
+	TLine *Line43;
+	TLine *Line42;
+	TLine *Line51;
+	TLine *Line52;
+	TLine *Line53;
+	TLine *Line61;
+	TLine *Line62;
+	TLine *Line63;
+	TLine *Line71;
+	TLine *Line72;
+	TLine *Line73;
+	TLabel *docu;
+	TLabel *done;
+	TNumberBox *doneTok;
+	TNumberBox *docuTok;
+	TButton *Set;
+	TLabel *Label1;
+	TLabel *Label2;
+	TNumberBox *PaDone;
+	TNumberBox *PaWait;
+	TComboBox *SpecBox;
+	TLabel *SpecState;
+	void __fastcall T1Click(TObject *Sender);
+	void __fastcall T2Click(TObject *Sender);
+	void __fastcall T3Click(TObject *Sender);
+	void __fastcall SetClick(TObject *Sender);
+	void __fastcall Synced();
+private:	// User declarations
+public:		// User declarations
+	__fastcall TItem3_form(TComponent* Owner);
+};
+//---------------------------------------------------------------------------
+extern PACKAGE TItem3_form *Item3_form;
+//---------------------------------------------------------------------------
+#endif
